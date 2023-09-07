@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Generation</title>
+    <style>
+        form {
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #command {
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script>
+        function generateMusic() {
+            var noteSequence = document.getElementById('noteSequence').value;
+            var minOctave = document.getElementById('minOctave').value;
+            var maxOctave = document.getElementById('maxOctave').value;
+            var subdivision = document.getElementById('subdivision').value;
+            var harmonicLikelihood = document.getElementById('harmonicLikelihood').value;
+            var deviance = document.getElementById('deviance').value;
+            var tempoFactor = document.getElementById('tempoFactor').value;
+            var outputFilename = document.getElementById('outputFilename').value;
+            var tonality = document.getElementById('tonality').value;
+            var sections = document.getElementById('sections').value;
+            var numTracks = document.getElementById('numTracks').value;
+            var numMeasures = document.getElementById('numMeasures').value;
+
+            var melodyCommand = `python3 mid.py --note_sequence ${noteSequence} --octave_range ${minOctave} ${maxOctave} --subdivision ${subdivision} --harmonic_likelihood ${harmonicLikelihood} --deviance ${deviance} --tempo_factor ${tempoFactor} --output_file ${outputFilename}_melody.mid`;
+            var basslineCommand = `python3 mid.py --note_sequence ${noteSequence} --octave_range ${minOctave} ${maxOctave} --subdivision ${subdivision} --harmonic_likelihood ${harmonicLikelihood} --deviance ${deviance} --tempo_factor ${tempoFactor} --output_file ${outputFilename}_bassline.mid`;
+            var chordsCommand = `python3 new.py --tonality ${tonality} --sections ${sections} --num_tracks ${numTracks} --octave_range ${minOctave} ${maxOctave} --harmonic_likelihood ${harmonicLikelihood} --output_file ${outputFilename}_chords.mid`;
+            var beatCommand = `python3 bar.py --num_tracks ${numTracks} --num_measures ${numMeasures} --output_file ${outputFilename}_beat.mid`;
+
+            var command = `${melodyCommand} && ${basslineCommand} && ${chordsCommand} && ${beatCommand}`;
+            document.getElementById('command').textContent = command;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label for="noteSequence">Note Sequence:</label></td>
+                <td>Sequence of notes (without octaves)<br><i>e.g., C D E F G A B</i></td>
+                <td><input type="text" id="noteSequence" name="noteSequence" value="C D E F G A B"></td>
+            </tr>
+            <tr>
+                <td><label for="minOctave">Minimum Octave:</label></td>
+                <td>Minimum octave for note generation</td>
+                <td><input type="text" id="minOctave" name="minOctave" value="3"></td>
+            </tr>
+            <tr>
+                <td><label for="maxOctave">Maximum Octave:</label></td>
+                <td>Maximum octave for note generation</td>
+                <td><input type="text" id="maxOctave" name="maxOctave" value="5"></td>
+            </tr>
+            <tr>
+                <td><label for="subdivision">Subdivision:</label></td>
+                <td>Duration of each subdivision</td>
+                <td><input type="text" id="subdivision" name="subdivision" value="0.25"></td>
+            </tr>
+            <tr>
+                <td><label for="harmonicLikelihood">Harmonic Likelihood:</label></td>
+                <td>Likelihood of adhering to note sequence order</td>
+                <td><input type="text" id="harmonicLikelihood" name="harmonicLikelihood" value="0.8"></td>
+            </tr>
+            <tr>
+                <td><label for="deviance">Deviance:</label></td>
+                <td>Deviance factor for repeating notes</td>
+                <td><input type="text" id="deviance" name="deviance" value="0.2"></td>
+            </tr>
+            <tr>
+                <td><label for="tempoFactor">Tempo Factor:</label></td>
+                <td>Tempo adjustment factor</td>
+                <td><input type="text" id="tempoFactor" name="tempoFactor" value="1.0"></td>
+            </tr>
+            <tr>
+                <td><label for="outputFilename">Output Filename:</label></td>
+                <td>Prefix for the generated MIDI files</td>
+                <td><input type="text" id="outputFilename" name="outputFilename" value="output"></td>
+            </tr>
+            <tr>
+                <td><label for="tonality">Tonality:</label></td>
+                <td>Tonality of the chord progression</td>
+                <td><input type="text" id="tonality" name="tonality" value="C D E F G A B"></td>
+            </tr>
+            <tr>
+                <td><label for="sections">Sections:</label></td>
+                <td>Number of chords in each section</td>
+                <td><input type="text" id="sections" name="sections" value="4 4 8"></td>
+            </tr>
+            <tr>
+                <td><label for="numTracks">Number of Tracks:</label></td>
+                <td>Number of tracks in the MIDI files</td>
+                <td><input type="text" id="numTracks" name="numTracks" value="1"></td>
+            </tr>
+            <tr>
+                <td><label for="numMeasures">Number of Measures:</label></td>
+                <td>Number of measures in the drum beats</td>
+                <td><input type="text" id="numMeasures" name="numMeasures" value="4"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Generate Music" onclick="generateMusic()">
+        <br>
+        <br>
+        <label for="command">Generated Command:</label>
+        <p id="command"></p>
+    </form>
+</body>
+</html>
