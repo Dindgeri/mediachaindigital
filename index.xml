@@ -30,6 +30,12 @@
                 margin: 10px auto;
             }
 
+            .burger-icon {
+                fill: #FFF;
+                width: 30px;
+                height: 30px;
+            }
+
             .nav-bar {
                 display: flex;
                 justify-content: center;
@@ -132,9 +138,8 @@
                 <path d="M50 10 L80 40 L50 70 L20 40 Z" fill="#333" />
             </svg>
             <div class="burger-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="40" fill="#00868C" />
-                    <path d="M50 10 L80 40 L50 70 L20 40 Z" fill="#333" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="burger-icon" viewBox="0 0 512 512">
+                    <path d="M80 152h352M80 256h352M80 360h352"/>
                 </svg>
             </div>
             <nav class="nav-bar">
@@ -246,6 +251,9 @@
                     sections.forEach((section) => {
                         section.style.display = section.id === target ? "block" : "none";
                     });
+
+                    // Close the mobile navigation menu after clicking a link
+                    navBar.classList.remove("active");
                 });
             });
 
