@@ -138,7 +138,7 @@
                 <path d="M50 10 L80 40 L50 70 L20 40 Z" fill="#333" />
             </svg>
             <div class="burger-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="burger-icon" viewBox="0 0 512 512">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 512 512">
                     <path d="M80 152h352M80 256h352M80 360h352"/>
                 </svg>
             </div>
