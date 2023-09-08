@@ -132,7 +132,7 @@
         </style>
     </head>
     <body>
-        <div>
+        <header>
             <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" fill="#00868C" />
                 <path d="M50 10 L80 40 L50 70 L20 40 Z" fill="#333" />
@@ -147,8 +147,18 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#sales">Client Portfolio</a></li>
                 </ul>
             </nav>
+        </header>
+        <div class="content">
+            <section id="home" class="section">
+                <h1>Welcome to Media Chain Digital</h1>
+                <p>Media Chain Digital is your partner for top-notch creative services. We specialize in audio design, 3D modeling, motion graphics, video design, and account management. Let's elevate your projects to new heights!</p>
+            </section>
             <section id="services" class="section">
                 <h2>Our Services</h2>
                 <p>We offer a diverse range of services tailored to your creative needs:</p>
