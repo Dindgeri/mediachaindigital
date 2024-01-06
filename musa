@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monimo - MUSA</title>
+    <style>
+        body {
+            font-family: "PT Mono", monospace;
+            background-color: #555555;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: black;
+        }
+
+        .message {
+            max-width: 70%;
+            text-align: left;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+            color: black;
+            font-size: 10px;
+        }
+
+        h2 {
+            font-size: 12px;
+            font-weight: bold;
+            color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message">
+        <img src="https://i.postimg.cc/hPX70BSv/image.png" width="30%" align="right">
+
+        <h2>Cervejaria MUSA (Marvila) - <i>Programação</i> 🎸</h2>
+
+        <p>🥁 Evento - "<b>Monimo, Melquiades & COWSCAOS (ou outro proj. a designar)</b>": Este evento celebra a fusão do rock e da cerveja, com as cervejas artesanais locais da <b>Cervejaria MUSA</b>, que irá apresentar, em concerto, as bandas <b>Melquiades</b>, <b>Monimo</b> & <b>COWSCAOS</b> (ou outro proj. a designar)</p>
+
+        <p>🎹 <b>Data</b> - Sexta 16 Fev. 2024 & Detalhes do Programa:</p>
+        <ul>
+            <li><b>Melquiades</b> - soundcheck: 4PM</li>
+            <li><b>Monimo</b> - soundcheck: 5PM</li>
+            <li><b>COWSCAOS</b> - soundcheck: 6PM (ou outro proj. a designar)</li>
+            <li><b>COWSCAOS</b> - actuação: 9 - 10PM</li>
+            <li><b>Monimo</b> - actuação: 10:30 - 11:30PM</li>
+            <li><b>Melquiades</b> - actuação: 12PM - 1:30AM</li>
+            <li><b>DJ</b> (residente ou a designar) - actuação: 2 - 3AM</li>
+        </ul>
+
+        <h2>🎶 Harmonia + Gastronomia</h2>
+
+        <p>Além das cervejas artesanais da <b>Cervejaria MUSA</b>, ofereceremos uma variedade de pratos que se harmonizem perfeitamente com as diferentes cervejas. Isso incluirá opções como batata-doce frita, hot dogs artesanais e hambúrguer com molho de cerveja, cada prato com uma versão vegan disponível.</p>
+
+        <h2>🍻 Merch & Tap Room</h2>
+
+        <p>Pack 🤘 <b>Especial</b>: Ao adquirir merchandising da <b>Cervejaria MUSA</b> ou das bandas presentes, os participantes receberão uma prova especial de 6 cervejas artesanais locais, complementando a experiência sensorial do evento.</p>
+
+        <h2>🛍️ Stand de Merchandising:</h2>
+
+        <p>Estabeleceremos stands dedicados ao merchandising da <b>Cervejaria MUSA</b> e das bandas participantes, oferecendo camisetas exclusivas, vinis de edições especiais, pôsteres autografados e outros itens colecionáveis relacionados ao mundo do rock e à cultura cervejeira.</p>
+
+        <h2>🎤 Leilão de Instrumentos Musicais:</h2>
+
+        <p>Propomos a inclusão de uma atividade especial de 30 a 45 minutos para um leilão de instrumentos musicais usados. Membros da audiência interessados em vender seus instrumentos terão a oportunidade de fazê-lo, proporcionando uma chance aos participantes de adquirirem instrumentos musicais previamente utilizados por entusiastas da música.</p>
+
+        <h2>🥂 Perspectivas:</h2>
+
+        <ul>
+            <li><b>Cliente</b>: Enfatiza a experiência imersiva e a conexão entre música e cerveja.</li>
+            <li><b>Artistas</b>: Destaca a autenticidade na interação com fãs e a plataforma oferecida pelo evento.</li>
+            <li><b>Comerciante</b>: Enfatiza oportunidades de venda e exposição da marca durante o evento.</li>
+            <li><b>Projeções Financeiras</b>: Estratégia focada na experiência imersiva e na integração entre música e cultura da cerveja artesanal. :)</li>
+        </ul>
+    </div>
+</body>
+
+</html>
